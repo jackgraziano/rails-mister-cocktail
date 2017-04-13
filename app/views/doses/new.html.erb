@@ -1,5 +1,11 @@
-<h1>Add ingredient do the wonderful %= @cocktail.name %></h1>
+<h1>Add ingredient do the wonderful <%= @cocktail.name %></h1>
 
-<% simple_form_for @dose do |f| %>
+<div class="container">
 
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description , label: "Measure" %>
+  <%= f.association :ingredient %>
+  <%= f.submit %>
 <% end %>
+
+</div>
