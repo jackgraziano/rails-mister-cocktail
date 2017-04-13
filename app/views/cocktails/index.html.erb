@@ -1,12 +1,17 @@
 <h1 class="text-center">Cocktails list  <i class="fa fa-glass" aria-hidden="true"></i> </h1>
 
 
+<div class="container text-center">
+  <%= link_to 'Add Cocktail', new_cocktail_path, class: 'btn btn-info btn-lg'%>
+
+</div>
+
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card-cocktail">
-          <%= link_to cocktail.name, cocktail_path(cocktail.id) , class: 'cocktail-name' %>
+          <%= link_to cocktail.name, cocktail_path(cocktail.id) , class: 'cocktail-name text-center' %>
         </div>
       </div>
     <% end %>

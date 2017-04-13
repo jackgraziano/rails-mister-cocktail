@@ -1,13 +1,15 @@
 <div class="container">
   <row>
-    <col-xs-12 class="col-sm-4 col-sm-offset-4">
+    <col-xs-12 class="col-sm-4 col-sm-offset-4 text-center">
       <h1>Cocktail details</h1>
 
-      <p>Ingredients of the wonderful <%= @cocktail.name %></p>
+      <p>Ingredients of the wonderful</p>
+
+      <h4><%= @cocktail.name %></h4>
 
       <ul>
-        <% @ingredients.each do |ingredient| %>
-          <li><%= ingredient.name %></li>
+        <% @doses.each do |dose| %>
+          <li><%= dose.ingredient.name %>, <%= dose.description %></li>
         <% end %>
 
         <div class="button-add-ingredient"><%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %></div>
