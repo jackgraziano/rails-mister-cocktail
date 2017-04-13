@@ -1,11 +1,18 @@
-<h1>Cocktail details</h1>
+<div class="container">
+  <row>
+    <col-xs-12 class="col-sm-4 col-sm-offset-4">
+      <h1>Cocktail details</h1>
 
-Ingredients of the wonderful <%= @cocktail.name %>
+      <p>Ingredients of the wonderful <%= @cocktail.name %></p>
 
-<ul>
-  <% @ingredients.each do |ingredient| %>
-    <li><%= ingredient.name %></li>
-  <% end %>
+      <ul>
+        <% @ingredients.each do |ingredient| %>
+          <li><%= ingredient.name %></li>
+        <% end %>
 
-  <p><%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail) %></p>
-</ul>
+        <div class="button-add-ingredient"><%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %></div>
+      </ul>
+    </col-xs-12>
+  </row>
+</div>
+
