@@ -7,6 +7,7 @@ end
 10.times do
   cocktail = Cocktail.new
   cocktail.name = Faker::Hipster.words(2).join(" ")
+  cocktail.remote_photo_url = Faker::LoremPixel.image("400x400")
   cocktail.save
 end
 

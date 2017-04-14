@@ -16,6 +16,7 @@
       <div class="col-xs-12 col-sm-4">
         <div class="card-cocktail">
           <%= link_to cocktail.name, cocktail_path(cocktail.id) , class: 'cocktail-name text-center' %>
+          <%= cl_image_tag cocktail.photo, width: 70, height: 70, class:"avatar-large" %>
         </div>
       </div>
     <% end %>
