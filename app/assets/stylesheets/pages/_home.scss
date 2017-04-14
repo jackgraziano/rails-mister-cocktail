@@ -5,7 +5,7 @@
 
 h1{
   font-family: 'Cookie', cursive;
-  font-size: 60px;
+  font-size: 80px;
 }
 
 .card-cocktail{
@@ -39,4 +39,14 @@ ul {
   list-style-type: none;
   padding: 0px;
 
+}
+
+.banner{
+  height: 300px;
+  margin-bottom: 20px;
+  background-image: asset-url('banner.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
