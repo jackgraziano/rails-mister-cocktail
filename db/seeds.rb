@@ -14,8 +14,8 @@ end
 
 150.times do
   dose = Dose.new
-  dose.ingredient_id = (1..Ingredient.count).to_a.sample
-  dose.cocktail_id = (1..Cocktail.count).to_a.sample
+  dose.ingredient_id = (Ingredient.minimum(:id)..Ingredient.maximum(:id)).to_a.sample
+  dose.cocktail_id = (Cocktail.minimum(:id)..Cocktail.maximum(:id)).to_a.sample
   dose.description = Faker::Food.measurement
   dose.save
 end
